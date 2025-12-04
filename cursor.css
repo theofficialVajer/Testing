@@ -1,0 +1,20 @@
+/* Hide default cursor */
+body {
+    cursor: none;
+}
+
+/* Custom cursor dot */
+#cursor-dot {
+    width: 12px;
+    height: 12px;
+    background: orange;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    z-index: 999999;
+
+    /* Glow */
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.8);
+}
