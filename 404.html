@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Arima", sans-serif;
+            background: #d86c00;
+            overflow: hidden;
+        }
+
+        /* Background robot */
+        .robot-bg {
+            position: absolute;
+            inset: 0;
+            background: url("d1bed145-73f3-40b1-9413-441ebdacdcd3.png") center/cover no-repeat;
+            opacity: 0.25;
+            animation: fadeIn 1.8s ease forwards;
+        }
+
+        /* Glass card */
+        .error-box {
+            position: relative;
+            padding: 40px 50px;
+            width: 450px;
+            backdrop-filter: blur(14px);
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+            text-align: center;
+            animation: floatUp 1.4s ease forwards;
+        }
+
+        .error-box h1 {
+            font-size: 70px;
+            margin: 0;
+            color: white;
+            text-shadow: 0 0 10px #00000080;
+        }
+
+        .error-box p {
+            color: white;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .error-box a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: #d86c00;
+            background: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 0 10px #000;
+            transition: 0.3s;
+        }
+
+        .error-box a:hover {
+            transform: translateY(-3px);
+            background: #ffe5c5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(1.05); }
+            to { opacity: 0.25; transform: scale(1); }
+        }
+
+        @keyframes floatUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="robot-bg"></div>
+
+    <div class="error-box">
+        <h1>404</h1>
+        <p>Oops... The page you're looking for has fallen apart.</p>
+        <a href="index.html">Go Home</a>
+    </div>
+
+</body>
+</html>
